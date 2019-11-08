@@ -1,0 +1,701 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+	outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+input[type=search] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+textarea {
+	overflow: auto;
+	vertical-align: top;
+	resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+audio,
+canvas,
+video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+
+[hidden] {
+	display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+	font-size: 100%; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+	-ms-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+	outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+
+img {
+	border: 0; /* 1 */
+	-ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+
+figure {
+	margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+
+form {
+	margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+
+legend {
+	border: 0; /* 1 */
+	padding: 0;
+	white-space: normal; /* 2 */
+	*margin-left: -7px; /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+
+button,
+input,
+select,
+textarea {
+	font-size: 100%; /* 1 */
+	margin: 0; /* 2 */
+	vertical-align: baseline; /* 3 */
+	*vertical-align: middle; /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+	line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+	text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button; /* 2 */
+	cursor: pointer; /* 3 */
+	*overflow: visible;  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box; /* 1 */
+	padding: 0; /* 2 */
+	*height: 13px; /* 3 */
+	*width: 13px; /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+	-webkit-appearance: textfield; /* 1 */
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box; /* 2 */
+	box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+	overflow: auto; /* 1 */
+	vertical-align: top; /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+	color: #222;
+}
+
+
+::-moz-selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+::selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+img {
+	vertical-align: middle;
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+textarea {
+	resize: vertical;
+}
+
+.chromeframe {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
+}
+
+/*####################### MY CSS CODE ##################################*/
+
+/*######################### Header style ###################*/
+body {
+	background-color: rgb(14, 155, 201);
+}
+
+header {
+	display: flex;
+	/* flex-direction: row; */
+	justify-content: flex-end;
+	align-items: center;
+	/* flex-wrap: nowrap; */
+	/* height: 60px; */
+	background-color: lightblue;
+	padding: 20px 5%;
+}
+
+header p {
+	color: #ff0000;
+	font-style: oblique;
+	font-size: larger;
+	display: none;
+}
+#logo {
+	background-image: url(images/logo.png);
+	background-size: 100% 100%;
+	margin-right: auto;
+	background-repeat: no-repeat;
+	height: 50px;
+	width: 50px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.nav-links {
+	list-style: none;
+}
+
+.nav-links li {
+	display: inline-block;
+}
+
+.nav-links li a {
+	transition: all 0.3 ease 0s;
+	color: #000;
+	font-size: larger;
+	text-transform: capitalize;
+	font-family: cursive;
+	font-weight: 700;
+	text-decoration: none;
+	padding-left: 15px;
+}
+
+.nav-links li a:hover {
+	color: #0088a9;
+}
+
+#logout-butt {
+	width: 70px;
+}
+
+.nav-input button:not(#logout-butt) {
+	display: none;
+}
+
+.nav-input input:not(#signup-butt):not(#login-butt) {
+	display: none;
+}
+
+.nav-input button, #signup-butt, #login-butt {
+	padding: 9px 25px;
+	background-color: rgba(0,136,169,1);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	font-size: small;
+	transition: all 0.3 ease 0s;
+}
+
+.nav-input button:hover, #signup-butt:hover, #login-butt:hover{
+	background-color: rgba(0,136,169,0.8);
+}
+
+.center {
+	margin: 20% auto 0;
+	/* position: relative; */
+	background-color: rgb(255, 255, 255, 0.5);
+	/* height: 50vh; */
+	width: 200px;
+	height: 300px;
+	border-radius: 15px;
+}
+
+.logins {
+	text-align: center;
+	/* top: 8%; */
+	/* margin: 30px auto; */
+	/* position: relative; */
+	padding-top: 30px;
+	height: calc(100% - 30px);
+	width: 100%;
+}
+
+::-webkit-input-placeholder{
+	font-size: 5%;
+}
+
+.logins h5 {
+	font-family: cursive;
+	font-size: 25px;
+	font-weight: 650;
+}
+
+.logins p {
+	color: #ff0000;
+	font-style: oblique;
+	font-size: medium;
+}
+
+.logins #success {
+	color: #0dff00;
+}
+
+#email, #pwd {
+	/* height: 30px; */
+	/* margin: 0 auto; */
+	/* width: 60%; */
+	/* overflow: auto; */
+	margin: 4% 0;
+}
+
+.logins #login-butt {
+	background-color: rgb(0, 106, 255);
+	/* font-size: 1.5vw; */
+	font-family: Arial, Helvetica, sans-serif;
+	border-radius: 10px 10px 10px 10px;
+	height: 25px;
+	width: 60%;
+	/* overflow: auto; */
+	/* margin-top: 5%; */
+	cursor: pointer;
+}
+
+.signup-butt {
+	background-color: rgb(57, 160, 179);
+	/* font-size: 1.5vw; */
+	font-family: Arial, Helvetica, sans-serif;
+	border-radius: 10px 10px 10px 10px;
+	height: 25px;
+	width: 60%;
+	/* overflow: auto; */
+	margin-top: 10%;
+	margin-bottom: 5%;
+	cursor: pointer;
+}
+
+.guest-butt {
+	background-color: rgb(100, 0, 255);
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	border-radius: 10px 10px 10px 10px;
+	height: 25px;
+	width: 60%;
+	margin-top: 15px;
+	margin-bottom: 5%;
+	cursor: pointer;
+	text-transform: capitalize;
+}
+
+#logout-butt {
+	float: right;
+	border-radius: 10px 10px 10px 10px;
+}
+
+/* ################### Gallery #############################  */
+.gallery {
+	background-color: beige;
+	width: 300px;
+	margin: 0 auto 30px;
+	overflow: hidden;
+
+}
+
+.gallery h2 {
+}
+
+.gallery div {
+	margin: 20px;
+	height: 220px;
+	background-color: #ccc;
+}
+
+/* ###################### Profile style ##########################  */
+
+.user-info {
+	background-color: rgba(255, 255, 255, 0.5);
+	width: 300px;
+	margin: 0 auto;
+}
+
+#pp {
+	height: 150px;
+	width: 150px;
+	background-image: url(images/default-user-image.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 30px auto 0;
+	border-radius: 10px;
+}
+
+/* ###################### Editor style ##########################  */
+
+#verify-tag {
+	color: #ff0000;
+	font-weight: 700;
+	font-size: medium;
+	text-align: center;
+	margin-top: 7%;
+}
+
+/*####################### Gallery style ##############################*/
+.grid {
+	display: grid;
+	grid-template-columns: 50px 1fr 1fr;
+}
+
+.grid div:nth-child(even) {
+	background-color: #ccc;
+}
+
+.grid div:nth-child(odd) {
+	background-color: beige;
+}
+/* ###############################################################  */
+/*########################### Footer Style ##############################*/
+footer {
+	position: fixed;
+	bottom: 3%;
+	left: 5%;
+	right: 5%;
+}
+
+footer h2 {
+	float: right;
+	font-style: italic;
+}
+/*########################### Portalable styling ####################*/
+
+@media only screen and (min-width: 768px) {
+	nav {
+		margin-right: 10%;
+	}
+
+	#logo {
+		height: 80px;
+		width: 80px;
+	}
+	
+	.center {
+		width: 400px;
+		height: 450px;
+		border-radius: 15px;
+	}
+						
+	.logins h5 {
+		font-family: cursive;
+		font-size: 40px;
+		font-weight: 650;
+	}
+						
+	::-webkit-input-placeholder{
+		font-size: 15px;
+	}
+						
+	#email, #pwd {
+		padding: 10px;
+		width: 60%;
+	}
+
+	.nav-input button {
+		display: inline;
+	}
+						
+	.signup-butt {
+		margin-top: 5%;
+	}
+	
+	.nav-input input:not(#signup-butt):not(#login-butt) {
+		display: inline;
+	}
+
+	.nav-input button:not(#logout-butt) {
+		display: inline;
+	}
+
+	.nav-input #login-butt {
+		display: none;
+	}
+
+	header p {
+		display: block;
+	}
+
+	#verify-tag {
+		font-size: x-large;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	.center {
+		margin-top: 10%;
+	}
+
+	.logins p {
+		font-size: larger;
+	}
+
+	.logins #login-butt {
+		height: 35px;
+	}
+	.signup-butt {
+		height: 35px;
+	}
+
+	.guest-butt {
+		height: 35px;
+	
+	}
+
+	#verify-tag {
+		font-size: xx-large;
+	}
+}

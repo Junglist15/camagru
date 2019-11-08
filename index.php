@@ -26,7 +26,7 @@
 				echo '<p id="success">Verified!<br />Please login<p>';
 			}
 			?>
-			<form action="includes/login.inc.php" method="post">
+			<form action="./includes/login.inc.php" method="post">
 				<input id="email" onkeyup="stoppedTyping()" type="text" name="mailuid" placeholder="Username/E-mail"><br>
 				<input id="pwd" onkeyup="stoppedTyping()" type="password" name="pwd" placeholder="Password"><br>
 				<button id="login-butt" type="submit" name="login-submit">Login</button><br>
