@@ -369,7 +369,7 @@ textarea {
 
 /*######################### Header style ###################*/
 body {
-	background-color: rgba(18, 182, 194, 0.329);
+	background-image: url(img/background_image.jpg);
 }
 
 header {
@@ -379,7 +379,7 @@ header {
 	align-items: center;
 	/* flex-wrap: nowrap; */
 	/* height: 60px; */
-	background-color: rgba(0, 0, 0, 0.411);
+	background-color: rgba(89, 0, 255, 0.349);
 	padding: 20px 5%;
 }
 
@@ -452,7 +452,7 @@ header p {
 .center {
 	margin: 20% auto 0;
 	/* position: relative; */
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(89, 0, 255, 0.5);
 	/* height: 50vh; */
 	width: 200px;
 	height: 300px;
@@ -477,6 +477,7 @@ header p {
 	font-family: cursive;
 	font-size: 25px;
 	font-weight: 650;
+	color: turquoise;
 }
 
 .logins p {
@@ -498,7 +499,7 @@ header p {
 }
 
 .logins #login-butt {
-	background-color: rgb(0, 106, 255);
+	background-color: plum;
 	/* font-size: 1.5vw; */
 	font-family: Arial, Helvetica, sans-serif;
 	border-radius: 10px 10px 10px 10px;
@@ -510,7 +511,7 @@ header p {
 }
 
 .signup-butt {
-	background-color: rgb(57, 160, 179);
+	background-color: plum;
 	/* font-size: 1.5vw; */
 	font-family: Arial, Helvetica, sans-serif;
 	border-radius: 10px 10px 10px 10px;
