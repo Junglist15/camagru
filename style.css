@@ -369,7 +369,7 @@ textarea {
 
 /*######################### Header style ###################*/
 body {
-	background-color: rgb(14, 155, 201);
+	background-color: rgba(18, 182, 194, 0.329);
 }
 
 header {
@@ -379,7 +379,7 @@ header {
 	align-items: center;
 	/* flex-wrap: nowrap; */
 	/* height: 60px; */
-	background-color: lightblue;
+	background-color: rgba(0, 0, 0, 0.411);
 	padding: 20px 5%;
 }
 
@@ -452,7 +452,7 @@ header p {
 .center {
 	margin: 20% auto 0;
 	/* position: relative; */
-	background-color: rgb(255, 255, 255, 0.5);
+	background-color: rgba(0, 0, 0, 0.5);
 	/* height: 50vh; */
 	width: 200px;
 	height: 300px;

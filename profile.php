@@ -25,14 +25,14 @@
 	<?php }
 	?>
 
-	<script>
+	<!-- <script>
 		function change_field() {
 		$m = document.getElementsByName("username");
 		$p = document.getElementsByName("email");
 			$m.disable = false;
 			$p.disable = false
 		}
-	</script> 
+	</script>  -->
 </main>
 
 

@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['login-submit'])) {
-	require '../config/database.php';
+	require 'dbh.inc.php';
 	$mailuid = $_POST['mailuid'];
 	$password = $_POST['pwd'];
 	if (empty($mailuid) || empty($password)) {
@@ -9,7 +9,7 @@ if (isset($_POST['login-submit'])) {
 	} else {
 		try {
 			$sql = "SELECT * FROM `users` WHERE `username`= :mailuid OR `email` = :mailuid";
-			$stmt = $conn->prepare($sql);
+			$stmt = $PDO->prepare($sql);
 			$stmt->bindParam(":mailuid", $mailuid);
 			$stmt->execute();
 			$result = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -60,7 +60,7 @@ else if (isset($_POST['guest-login-submit']))
 	} else {
 		try {
 			$sql = "SELECT * FROM `users` WHERE `username`= :mailuid OR `email` = :mailuid";
-			$stmt = $conn->prepare($sql);
+			$stmt = $PDO->prepare($sql);
 			$stmt->bindParam(":mailuid", $mailuid);
 			$stmt->execute();
 			$result = $stmt->fetch(PDO::FETCH_ASSOC);
