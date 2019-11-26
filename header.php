@@ -1,4 +1,6 @@
-<?php session_start();?>
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -11,31 +13,30 @@
 
 </head>
 <header>
-	<div id="logo"></div>
+	<div onclick="window.location.href='gallery.php?page=1.php'" id="logo"></div>
 	<?php
 	if (isset($_SESSION['userId'])) { ?>
 		<nav>
 		<ul class="nav-links">
 			<li><a href="profile.php">profile</a></li>
-			<li><a href="gallery.php">gallery</a></li>
+			<li><a href="gallery.php?page=1">gallery</a></li>
 			<li><a href="editor.php">editor</a></li>
 		</ul>
 	</nav>
 
 	<div class="nav-input">
 		<form action="includes/login.inc.php" method="post">
-			<button id="logout-butt" type="submit" name="logout-submit">Logout</button>
+			<button class="logout-butt" type="submit" name="logout-submit">Logout</button>
 		</form>
 	</div> <?php
-	}
-	if (isset($_GET['guest'])) { ?>
+	} else if (!$_SESSION && isset($_GET['page'])) { ?>
 		<div class="nav-input">
 		<form action="includes/login.inc.php" method="post">
-		<input type="text" name="mailuid" placeholder="Username/E-mail">
+		<input type="text" name="mailuid" value="<?php if (isset($_GET['mailuid'])) echo $_GET['mailuid']; ?>" placeholder="Username/E-mail">
 		<input type="password" name="pwd" placeholder="Password">
 		<button type="submit" name="guest-login-submit">Login</button>
-		<input id="login-butt" type="button" value="Login" onclick="location.href='index.php'">
-		<input id="signup-butt" type="button" value="Signup" onclick="location.href='signup.php'">
+		<input class="login-butt" type="button" value="Login" onclick="location.href='index.php'">
+		<input class="signup-butt" type="button" value="Signup" onclick="location.href='signup.php'">
 		</form>
 		<?php
 		if (isset($_GET['error'])) {
